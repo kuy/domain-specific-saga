@@ -2,6 +2,7 @@
 [![Travis][ci_img]][ci_site]
 [![Coverage Status][ca_img]][ca_site]
 [![Dependency Status][david_img]][david_site]
+[![Standard - JavaScript Style Guide][sjs_img]][sjs_site]
 
 # Domain Specific Saga
 
@@ -114,3 +115,5 @@ Yuki Kodama / [@kuy](https://twitter.com/kuy)
 [ca_site]: https://coveralls.io/github/kuy/domain-specific-saga?branch=master
 [david_img]: https://img.shields.io/david/kuy/domain-specific-saga.svg
 [david_site]: https://david-dm.org/kuy/domain-specific-saga
+[sjs_img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[sjs_site]: http://standardjs.com/

@@ -1,16 +1,17 @@
-import assert from 'assert';
+import assert from 'assert'
 
 export default function* transform(iterator, rules = []) {
-  let ret;
+  let ret
   while (true) {
-    let { value, done } = iterator.next(ret);
+    let { value, done } = iterator.next(ret)
     if (done) {
-      return value;
+      return value
     }
 
-    value = rules.reduce((p, t) => t(p), value);
-    ret = yield value;
+    value = rules.reduce((p, t) => t(p), value)
+    ret = yield value
   }
 
-  assert(false, "Something wrong, shouldn't be reached here.");
+  // eslint-disable-next-line no-unreachable
+  assert(false, "Something wrong, shouldn't be reached here.")
 }

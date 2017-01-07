@@ -3,5 +3,15 @@
     "plugins": [
         "standard",
         "promise"
-    ]
+    ],
+    "rules": {
+        "space-before-function-paren": ["error", "never"],
+        "comma-dangle": ["error", {
+            "arrays": "only-multiline",
+            "objects": "only-multiline",
+            "imports": "only-multiline",
+            "exports": "never",
+            "functions": "never"
+        }]
+    }
 }
