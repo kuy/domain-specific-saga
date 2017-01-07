@@ -8,6 +8,8 @@
 
 A helper library to realize **Domain Specific Saga** for your [Redux](http://redux.js.org/) + [redux-saga](https://github.com/redux-saga/redux-saga) apps.
 
+**NOTE: This package is ACTIVELY UNDER DEVELOPMENT.**
+
 ## Installation
 
 ```
