@@ -10,14 +10,21 @@ A helper library to realize **Domain Specific Saga** for your [Redux](http://red
 ## Installation
 
 ```
+yarn add domain-specific-saga
+```
+
+Or
+
+```
 npm install --save domain-specific-saga
 ```
 
 
 ## Features
 
-+ [*] Transform
-+ [] Intercept
++ ✅ Transform
++ ☑️ Intercept
++ ☑️ Cancel
 + ...More?
 
 
