@@ -14,62 +14,39 @@ npm install --save domain-specific-saga
 ```
 
 
-## Usage
-
-```js
-import transform from 'domain-specific-saga';
-
-const rules = [
-  value => {
-    if (typeof value === 'number') {
-      if (value === 0) {
-        return INTERCEPT;
-      } else if (0 < value) {
-        return put(increment(value));
-      } else {
-        return put(decrement(Math.abs(value)));
-      }
-      return value;
-    }
-  },
-  value => {
-    if (typeof value === 'boolean' && value === false) {
-      return put(reset());
-    } else {
-      return value;
-    }
-  },
-];
-
-function* saga() {
-  yield 3;
-  yield false;
-  yield -2;
-  yield 0;
-}
-
-function* rootSaga() {
-  yield call(createDSS(saga, rules));
-}
-```
-
-### Equivalent to...
-
-```js
-function* saga() {
-  yield put(increment(3));
-  yield put(reset());
-  yield put(decrement(2));
-  // yielding 0 is ignored
-}
-```
-
-
 ## Features
 
 + [*] Transform
 + [] Intercept
 + ...More?
+
+
+## Usage
+
+```js
+import transform from 'domain-specific-saga'
+
+const rules = [
+  value => {
+    if (typeof value === 'number') {
+      return value.toString()
+    } else {
+      return value
+    }
+  },
+]
+
+function* generator() {
+  yield 3
+  yield 'hoge'
+  yield -2
+}
+
+const i = transform(generator(), rules)
+i.next() // => '3'
+i.next() // => 'hoge'
+i.next() // => '-2'
+```
 
 
 ## The Goal
